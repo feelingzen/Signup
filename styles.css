@@ -1,0 +1,151 @@
+:root {
+    --main-color: rgb(64, 123, 255);
+    --secondary-color: white;
+    --accent-color: rgb(0, 81, 255);
+    --correct: rgb(0, 236, 51);
+    --incorrect: rgb(204, 0, 0);
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+.bg-img {
+    max-width: 100%;
+}
+
+.bg-container {
+    background-color: white;
+    width: 45vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.bg-container p {
+    font-size: 1.3rem;
+    color: var(--main-color);
+    position: relative;
+}
+
+.bg-container span {
+    font-weight: 700;
+}
+
+.signup-container {
+    gap: 6rem;
+    background-color: var(--main-color);
+    width: 55vw;
+    display: flex;
+    gap: 45px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 3rem;
+    color: var(--secondary-color);
+}
+
+.signup-container h1 {
+    font-family: 'Poppins';
+    font-size: 3rem;
+}
+
+form {
+    gap: 2rem 5rem;
+    max-width: 50rem;
+    display: flex;
+    flex: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transition: 0.3s;
+}
+
+.login-button {
+    width: 40vw;
+    display: block;
+}
+
+.submitButton {
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Poppins';
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border-style: none;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px -3px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.submitButton:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+input {
+    box-shadow: 10px 10px 15px -3px rgba(0,0,0,0.1);
+    padding: 5px 10px;
+    width: 15rem;
+    height: 1.8rem;
+    border-radius: 5px;
+    border-style: none;
+    border-width: 2px;
+    border-color: var(--accent-color);
+    transition: 0.3s;
+}
+
+input:focus:valid {
+    transition: 0.3s;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--correct);
+}
+
+input:focus:invalid {
+    transition: 0.3s;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--incorrect);
+}
+
+input:focus {
+    outline: none;
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#LogoText {
+    position: absolute;
+    background-color: var(--accent-color);
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    top: 1rem;
+    left: 2rem;
+    color: white;
+    text-shadow: 10px 10px 15px -3px rgba(0,0,0,0.1);
+    box-shadow: 10px 10px 15px -3px rgba(0,0,0,0.1);
+}
